@@ -7,8 +7,7 @@ import java.util.Map;
 /**
  * @version 1.0
  * @author DanielYeee
- * 传递一个目标值，判断数组中是否有两数之和等于该目标值，有则打印位置和值，没有则抛出异常
- *
+ *given an array of integer,return indices of the two numbers such that they add up to a specific target
  */
 
 public class TwoNums {
