@@ -1,9 +1,8 @@
 package leetcode;
 
 /**
- * Reverse int
+ *Given a 32-bit signed integer,reverse digits of an integer
  * @author DanielYeee
- *
  */
 
 public class ReverseInt {
