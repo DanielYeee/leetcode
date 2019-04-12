@@ -19,8 +19,7 @@ public class TwoNums {
 
 		 
 
-	/**
-	 * @author DanielYeee
+	/*
 	 * @param  int[] arr,int target
 	 * @return int[]
 	 * 
@@ -39,11 +38,10 @@ public class TwoNums {
 	}
 	
 	
-	/**
+	/*
 	 * @param nums
 	 * @param target
 	 * @return String
-	 * 同时使用图和数组进行判断
 	 */
 	 public static String twoSum(int[] nums,int target) {
 		 	Map<Integer, Integer> map = new HashMap<>();
@@ -60,8 +58,7 @@ public class TwoNums {
 		 
 	 }
 	 
-	 /**
-	  * 
+	 /*
 	  * @param nums
 	  * @param target
 	  * @return String
