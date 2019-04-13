@@ -1,7 +1,7 @@
 package leetcode;
 
 /**
- * 
+ * there are three methods to find the longest common prefix of a string array.
  * @author DanielYeee
  *write a function to find the longest common prefix string amongst an array of strings
  *if there is no common prefix ,return an empty string ""
@@ -14,21 +14,21 @@ public class LongestcCommonPrefix {
 	}
 	
 	public static String longestCommonPrefix1(String[] str) {
-		if(str.length == 0) //¿ÕÊý×é
+		if(str.length == 0) //ç©ºæ•°ç»„
 			return "";
-		int i = 0;//¹²Í¬Ç°×º³¤¶È
+		int i = 0;//å…±åŒå‰ç¼€é•¿åº¦
 		String prefix = "";
 		String result;
-		boolean broken = false;//Ìø³öwhileÑ­»·±êÖ¾
+		boolean broken = false;//è·³å‡ºwhileå¾ªçŽ¯æ ‡å¿—
 		while(true) {
-			i++;//Ô¤ÏÈÔö´ó¹²Í¬Ç°×º³¤¶È
+			i++;//é¢„å…ˆå¢žå¤§å…±åŒå‰ç¼€é•¿åº¦
 			result = prefix;
-			if(i > str[0].length())  //Ç°×º³¤¶È´óÓÚµÚÒ»¸ö×Ö·û´®ÔòÍË³öÑ­»·
+			if(i > str[0].length())  //å‰ç¼€é•¿åº¦å¤§äºŽç¬¬ä¸€ä¸ªå­—ç¬¦ä¸²åˆ™é€€å‡ºå¾ªçŽ¯
 				break;
-			prefix = str[0].substring(0, i);//ÒÔµÚÒ»¸ö×Ö·û´®Îª»ù×¼£¬Öð½¥Ôö´ó¹²Í¬Ç°×ºµÄ³¤¶È
+			prefix = str[0].substring(0, i);//ä»¥ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸²ä¸ºåŸºå‡†ï¼Œé€æ¸å¢žå¤§å…±åŒå‰ç¼€çš„é•¿åº¦
 			for(String word : str) {
-				//Ìø³öwhileÑ­»·Ìõ¼þ£º£¨1£©Ô¤ÏÈÉèÖÃµÄ¹²Í¬Ç°×º³¤¶È´óÓÚ×Ö·û´®Êý×éÖÐÆäÖÐÒ»¸ö×Ö·û´®£»
-				//					£¨2£©×Ö·û´®Êý×éÖÐÄ³¸ö×Ö·û´®²»ÒÔprefix¿ªÍ·¡£
+				//è·³å‡ºwhileå¾ªçŽ¯æ¡ä»¶ï¼šï¼ˆ1ï¼‰é¢„å…ˆè®¾ç½®çš„å…±åŒå‰ç¼€é•¿åº¦å¤§äºŽå­—ç¬¦ä¸²æ•°ç»„ä¸­å…¶ä¸­ä¸€ä¸ªå­—ç¬¦ä¸²ï¼›
+				//					ï¼ˆ2ï¼‰å­—ç¬¦ä¸²æ•°ç»„ä¸­æŸä¸ªå­—ç¬¦ä¸²ä¸ä»¥prefixå¼€å¤´ã€‚
 				if(i > word.length() || !word.startsWith(prefix)) {
 					broken = true;
 					break;
